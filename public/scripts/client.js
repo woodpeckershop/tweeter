@@ -24,6 +24,8 @@ $(document).ready(() => {
 
     //post request - call loadtweets
     $.post("/tweets", urlEncodedData).then(loadTweets);
+    $("#tweet-text").val("");
+    $countButton.text(140);
   });
 
   //ajax get request
