@@ -1,16 +1,24 @@
+#tweets-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
+}
+
 article.tweet {
   display: flex;
   flex-direction: column;
   /* align-items:stretch */
   border: 0.2em solid#5e5e5e;
   margin-top: 2em;
+  width:100%
 }
 
 article.tweet:hover {
   box-shadow: 8px 8px rgba(64,86,161,0.3);
 }
 
-article.tweet header {
+.profile {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -25,7 +33,7 @@ article.tweet header {
   font-weight: bold;
 }
 
-article.tweet > div {
+article.tweet > div.class {
   height: 2em;
   border-bottom: 0.2em solid#5e5e5e;
   margin-right: 1em;
