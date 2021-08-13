@@ -4,7 +4,7 @@ A responsive single-page AJAX-based Twitter clone that uses jQuery, HTML5 and pl
 
 ## Final Product
 
-
+!["recording of index page"](https://github.com/woodpeckershop/tweeter/blob/master/docs/demo-index.gif?raw=true)
 
 ## Getting Started
 
