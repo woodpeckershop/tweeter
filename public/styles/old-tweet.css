@@ -2,20 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%
+  width: 100%;
 }
 
 article.tweet {
   display: flex;
   flex-direction: column;
-  /* align-items:stretch */
   border: 0.2em solid#5e5e5e;
   margin-top: 2em;
-  width:100%
+  width: 100%;
 }
 
 article.tweet:hover {
-  box-shadow: 8px 8px rgba(64,86,161,0.3);
+  box-shadow: 8px 8px rgba(64, 86, 161, 0.3);
 }
 
 .profile {
@@ -25,38 +24,34 @@ article.tweet:hover {
   align-items: center;
   padding: 1em;
 }
-.user span{
-  margin-left: 0.3em
+.user span {
+  margin-left: 0.3em;
 }
 .at {
-  color: rgba(64,86,161,0.5);
+  color: rgba(64, 86, 161, 0.5);
   font-weight: bold;
 }
 
-article.tweet > div.class {
-  height: 2em;
+.content {
   border-bottom: 0.2em solid#5e5e5e;
   margin-right: 1em;
   margin-left: 1em;
+  word-break: break-word;
 }
 
 article.tweet footer {
-  box-sizing:content-box;
+  box-sizing: content-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 1em;
-  /* width: 90%; */
-}
-/* article.tweet footer > p{
-  padding-left: 1em;
-} */
-article.tweet footer > div{
-  color: #4056a1;
-  /* padding-right: 1em; */
 }
 
-article.tweet footer > div > i:hover{
-color:orange
+article.tweet footer > div {
+  color: #4056a1;
+}
+
+article.tweet footer > div > i:hover {
+  color: orange;
 }

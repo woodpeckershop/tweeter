@@ -5,29 +5,28 @@
  */
 
 $(document).ready(() => {
-
-  // submit event handler
   const $form = $(".submitForm");
+  // submit event handler
   $form.on("submit", function (event) {
     event.preventDefault();
     const urlEncodedData = $(this).serialize();
     const $countButton = $(".counter");
     const tweetNumber = Number($countButton.text());
-    $('#too-long').slideUp('fast');
-    $('#empty').slideUp('fast');
+    //edge cases
+    $("#too-long").slideUp("fast");
+    $("#empty").slideUp("fast");
     if (tweetNumber === 140) {
-      
-          return $('#empty').slideDown('fast');
+      return $("#empty").slideDown("fast");
     }
     if (tweetNumber < 0) {
- 
-      return $('#too-long').slideDown('fast');
+      return $("#too-long").slideDown("fast");
     }
-    console.log(urlEncodedData);
 
+    //post request - call loadtweets
     $.post("/tweets", urlEncodedData).then(loadTweets);
   });
 
+  //ajax get request
   const loadTweets = () => {
     $.ajax({
       url: "/tweets",
@@ -42,33 +41,11 @@ $(document).ready(() => {
       },
     });
   };
-  // loadTweets()
 
-  const data = [
-    {
-      user: {
-        name: "Newton",
-        avatars: "https://i.imgur.com/73hZDYK.png",
-        handle: "@SirIsaac",
-      },
-      content: {
-        text: "If I have seen further it is by standing on the shoulders of giants",
-      },
-      created_at: 1461116232227,
-    },
-    {
-      user: {
-        name: "Descartes",
-        avatars: "https://i.imgur.com/nlhLi3I.png",
-        handle: "@rd",
-      },
-      content: {
-        text: "Je pense , donc je suis",
-      },
-      created_at: 1461113959088,
-    },
-  ];
+  //call function when refresh page
+  loadTweets();
 
+  //function - render all tweets
   const renderTweets = function (tweets) {
     //  empty posts on the screen before posting the database
     const $tweetsContainer = $("#tweets-container");
@@ -82,40 +59,34 @@ $(document).ready(() => {
     }
   };
 
+  //function - create tweet HTML
   const createTweetElement = (tweet) => {
-    const $content = $("<div class = 'content'>").text(tweet.content.text);
-    const $postDate = $("<span class = 'postDate'>").text(
-      timeago.format(tweet.created_at)
-    );
-
     const $tweet = $("<article>").addClass("tweet");
 
     //header
     const $header = $("<header>").addClass("profile");
     const $user = $("<span>").addClass("user");
-
     const $username = $("<span class = 'username'>").text(tweet.user.name);
     const $avatar = $("<img class = 'avatar'>").attr("src", tweet.user.avatars);
     $user.append($avatar, $username);
     const $handle = $("<span class = 'at'>").text(tweet.user.handle);
     $header.append($user, $handle);
-    const $footer = $("<footer>");
+    //content
+    const $content = $("<p class = 'content'>").text(tweet.content.text);
 
+    //footer
+    const $footer = $("<footer>");
+    const $postDate = $("<span class = 'postDate'>").text(
+      timeago.format(tweet.created_at)
+    );
     const $div = $("<div>");
     const $icon1 = $("<i>").addClass("fas fa-flag");
     const $icon2 = $("<i>").addClass("fas fa-retweet");
     const $icon3 = $("<i>").addClass("fas fa-heart");
     $div.append($icon1, $icon2, $icon3);
-
-    $tweet.append($header, $content, $footer);
-
     $footer.append($postDate, $div);
 
+    $tweet.append($header, $content, $footer);
     return $tweet;
   };
-
-  // renderTweets(data);
-
-  // Test / driver code (temporary)
-  // console.log($tweet); // to see what it looks like
 });

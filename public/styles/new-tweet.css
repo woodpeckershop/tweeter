@@ -4,12 +4,6 @@
   width: 100%;
 }
 
-/* #error-message {
-  font-family: "Bungee";
-  color: red;
-  display: none;
-} */
-
 #empty{
   font-family: "Bungee";
   color: red;
@@ -33,6 +27,11 @@ font-weight: bold;
 padding-top: 1em;
 }
 
+#tweet-text::placeholder {
+  font-weight: bold;
+  font-size: xx-large
+}
+
 #tweet-text {
   box-sizing: content-box;
   background-color: transparent;
@@ -42,7 +41,8 @@ padding-top: 1em;
   border-bottom: 0.2em solid#5e5e5e;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  font-size: 0.8em;
+  font-size: 1em;
+  
 }
 
 .tweetButtonAndCounter {

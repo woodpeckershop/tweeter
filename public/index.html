@@ -60,8 +60,11 @@
         ><i class="fas fa-angle-double-down"></i>
       </span>
     </nav>
+    <!-- section - below nav bar -->
     <section class="below-nav">
+      <!-- header -->
       <header class="main-header">
+        <br />
         <div>
           <img src="/images/profile-hex.png" />
         </div>
@@ -72,6 +75,7 @@
       </header>
       <!-- Page-specific (main) content here -->
       <main class="container">
+        <!-- new tweet -->
         <section class="new-tweet">
           <section id="error-message">
             <div id="empty">Tweet cannot be empty!</div>
@@ -79,8 +83,11 @@
           </section>
 
           <form class="submitForm">
-            <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
+            <textarea
+              name="text"
+              id="tweet-text"
+              placeholder="What are you humming about?"
+            ></textarea>
             <div class="tweetButtonAndCounter">
               <button type="submit" class="submitButton">Tweet</button>
               <output name="counter" class="counter" for="tweet-text"
@@ -89,7 +96,7 @@
             </div>
           </form>
         </section>
-
+        <!-- old tweet -->
         <section id="tweets-container"></section>
       </main>
     </section>
