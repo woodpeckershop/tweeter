@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
@@ -16,23 +15,30 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro";
-}
-body #upScroll {
-  color: red;
-  transition: all 0.2s ease-in-out;
-  font-size: 7vw;
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  display: none;
-}
-body #upScroll:hover {
-  color: #4056a1;
+
+  #upScroll {
+    color: red;
+    transition: all 0.2s ease-in-out;
+    font-size: 7vw;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: none;
+  
+    &:hover {
+      color: #4056a1;
+     
+    }
+
+  }
+ 
+  
 }
 
 /*
@@ -42,13 +48,14 @@ body #upScroll:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.below-nav main {
-  width: 90%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #f4f1ec;
+
+  main {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f1ec;
+  }
 }
 
 /* Tablet Styles */
@@ -59,10 +66,11 @@ body #upScroll:hover {
     justify-content: space-around;
     margin-top: 120px;
     align-items: flex-start;
-  }
-  .below-nav main {
-    box-sizing: content-box;
-    padding: 2em;
-    width: 50vw;
+
+    main {
+      box-sizing: content-box;
+      padding: 2em;
+      width: 50vw;
+    }
   }
 }

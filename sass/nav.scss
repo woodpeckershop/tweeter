@@ -1,0 +1,64 @@
+// scss
+$primary-color: #4056a1;
+$primary-font: "Bungee";
+/* Mobile Styles */
+nav {
+  height: 120px;
+  background-color: orange;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  .tweeter {
+    font-size: xx-large;
+    font-family: $primary-font;
+    padding-left: 1.5em;
+    padding-top: 1em;
+    color: white;
+  }
+  .write {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1.5em;
+    color: white;
+    border-radius: 30px;
+    padding: 13px 23px;
+    background: transparent;
+    position: relative;
+    .bold {
+      font-weight: bold;
+    }
+    i {
+      color: red;
+      animation: moveArrow 1s ease infinite;
+    }
+  }
+  .write:hover {
+     top: -5px;
+  }
+  @keyframes moveArrow {
+    0% {
+      transform: translateY(-30%);
+    }
+
+    50% {
+      transform: translateY(30%);
+    }
+
+    100% {
+      transform: translateY(-30%);
+    }
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  nav {
+    background-color: $primary-color;
+  }
+}

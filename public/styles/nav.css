@@ -8,28 +8,46 @@ nav {
   align-items: center;
   width: 100%;
   position: fixed;
-  top: 0
+  top: 0;
 }
-
-.bold{
-  font-weight: bold;
-}
-.tweeter {
-  font-size:xx-large;
+nav .tweeter {
+  font-size: xx-large;
   font-family: "Bungee";
   padding-left: 1.5em;
-  padding-top:1em;
+  padding-top: 1em;
   color: white;
 }
-.write{
+nav .write {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 1.5em;
+  margin-right: 1.5em;
   color: white;
+  border-radius: 30px;
+  padding: 13px 23px;
+  background: transparent;
+  position: relative;
 }
-nav i{
+nav .write .bold {
+  font-weight: bold;
+}
+nav .write i {
   color: red;
+  animation: moveArrow 1s ease infinite;
+}
+nav .write:hover {
+  top: -5px;
+}
+@keyframes moveArrow {
+  0% {
+    transform: translateY(-30%);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(-30%);
+  }
 }
 
 /* Tablet Styles */
@@ -38,4 +56,3 @@ nav i{
     background-color: #4056a1;
   }
 }
-

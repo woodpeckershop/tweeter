@@ -3,46 +3,41 @@
   flex-direction: column;
   width: 100%;
 }
-
-#empty{
+.new-tweet #empty {
   font-family: "Bungee";
   color: red;
   display: none;
-  border: 3px solid red
+  border: 3px solid red;
 }
-#too-long{
+.new-tweet #too-long {
   font-family: "Bungee";
   color: red;
   display: none;
-  border: 3px solid red
+  border: 3px solid red;
 }
-
-.submitForm {
+.new-tweet .submitForm {
   display: flex;
   flex-direction: column;
 }
-
-.submitForm label{
-font-weight: bold;
-padding-top: 1em;
-}
-
-#tweet-text::placeholder {
+.new-tweet .submitForm .submitForm label {
   font-weight: bold;
-  font-size: xx-large
+  padding-top: 1em;
 }
-
-#tweet-text {
+.new-tweet .submitForm #tweet-text {
   box-sizing: content-box;
   background-color: transparent;
   border: none;
   resize: none;
   outline: none;
-  border-bottom: 0.2em solid#5e5e5e;
+  border-bottom: 0.2em solid #5e5e5e;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   font-size: 1em;
-  
+}
+
+#tweet-text::placeholder {
+  font-weight: bold;
+  font-size: xx-large;
 }
 
 .tweetButtonAndCounter {
@@ -50,17 +45,16 @@ padding-top: 1em;
   flex-direction: row;
   justify-content: space-between;
 }
-.submitButton {
+.tweetButtonAndCounter .submitButton {
   font-family: "Bungee";
   background-color: #4056a1;
   color: #ffffff;
 }
-
-.counter {
+.tweetButtonAndCounter .counter {
   font-family: "Bungee";
   color: #5e5e5e;
 }
-.exceeded {
+.tweetButtonAndCounter .exceeded {
   font-family: "Bungee";
   color: red;
 }
