@@ -59,7 +59,6 @@ $(document).ready(() => {
       method: "GET",
       dataType: "json",
       success: (posts) => {
-        console.log(posts);
         renderTweets(posts);
       },
       error: (err) => {
@@ -95,7 +94,7 @@ $(document).ready(() => {
     const $username = $("<span class = 'username'>").text(tweet.user.name);
     const $avatar = $("<img class = 'avatar'>").attr("src", tweet.user.avatars);
     $user.append($avatar, $username);
-    const $handle = $("<span class = 'at'>").text(tweet.user.handle);
+    const $handle = $("<span class = 'handleName'>").text(tweet.user.handle);
     $header.append($user, $handle);
     //content
     const $content = $("<p class = 'content'>").text(tweet.content.text);

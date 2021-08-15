@@ -27,7 +27,7 @@ article.tweet:hover {
 .profile .user span {
   margin-left: 0.3em;
 }
-.profile .at {
+.profile .handleName {
   color: rgba(64, 86, 161, 0.5);
   font-weight: bold;
 }

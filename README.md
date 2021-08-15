@@ -17,8 +17,13 @@ A responsive single-page AJAX-based Twitter clone that uses jQuery, HTML5 and pl
 
 - Express
 - Node 5.10.x or above
-- body-parser,
+- body-parser
 - chance
 - express
 - md5
 - timeago.js
+
+## Extra features
+
+- Add bottom and top toggle button
+- Add SASS
